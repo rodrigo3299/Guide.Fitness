@@ -1,0 +1,35 @@
+[
+    {
+    "title": "",
+    "image": "foto1.jpeg",
+    "text": [
+    ""
+    ],
+    "tags": ["Treino de Musculação"]
+    },
+    
+        {
+        "title": "",
+        "image": "perna.jpg",
+        "text": [
+        ""
+        ],
+        "tags": ["Treino de Perna"]
+        },
+            {
+            "title": "",
+            "image": "costas.jpg",
+            "text": [
+            ""
+            ],
+            "tags": ["Treino de Costas"]
+            },
+            {
+                "title": "",
+                "image": "cardio.jpg",
+                "text": [
+                ""
+                ],
+                "tags": ["Treino Cardiovascular"]
+                }
+]
