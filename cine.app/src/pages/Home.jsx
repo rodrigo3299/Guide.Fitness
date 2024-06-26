@@ -2,12 +2,15 @@ import React from 'react';
 import data from '../../artigos.json';
 import Carrosel from '../componentes/Carrosel/Carrosel.jsx';
 import Footer from '../componentes/Footer/Footer.jsx';
+import Navbar2 from '../componentes/Navbar2/Navbar2';
+
 
 function Home() {
     return (
         <main className="bg-black min-h-screen">
             <div className="container mx-auto p-4">
                 <Carrosel />
+                <Navbar2/>
                 <h1 className="text-white text-4xl mb-8">TREINOS 15/6</h1>
                 <div className="grid grid-cols-2 gap-4">
                     {data.map(fit => (
@@ -38,6 +41,7 @@ function Home() {
                 </div>
             </div>
             <Footer />
+            
         </main>
     );
 }

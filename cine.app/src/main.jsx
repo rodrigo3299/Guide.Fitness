@@ -7,8 +7,13 @@ import Sobre from './pages/Sobre.jsx'
 import PageNotFound from './pages/PageNotFound.jsx'
 import Home from './pages/Home.jsx'
 import Favoritos from './pages/Favoritos.jsx'
-import Noticias from './pages/Noticias.jsx'
 import Login from './pages/Login.jsx'
+import Treino from './pages/Treino.jsx'
+import Cardio from './pages/Cardio.jsx'
+import Anotacoes from './pages/Anotacoes.jsx'
+import Dieta from './pages/Dieta.jsx'
+import Suporte from './pages/Suporte.jsx'
+
 
 const router = createBrowserRouter(
   [
@@ -19,8 +24,12 @@ const router = createBrowserRouter(
       {index: true, element: <Home/>},
       {path:"favoritos", element: <Favoritos/>},
       {path:"sobre", element: <Sobre/>},
-      {path:"noticias", element: <Noticias/>},
       {path:"login", element: <Login/>},
+      {path:"treino", element: <Treino/>},
+      {path:"cardio", element: <Cardio/>},
+      {path:"anotacoes", element: <Anotacoes/>},
+      {path:"dieta", element: <Dieta/>},
+      {path:"suporte", element: <Suporte/>},
       {path:"*", element: <PageNotFound/>}
         
       ]

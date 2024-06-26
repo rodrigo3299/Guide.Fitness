@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 const Carrosel = () => {
     const [images] = useState([
         { src: 'muscula.png', text: 'Treino do Dia 15/06' },
@@ -30,6 +31,7 @@ const Carrosel = () => {
                     <p className="text-lg font-bold">{images[currentIndex].text}</p>
                 </div>
             </div>
+            
         </div>
     );
 };

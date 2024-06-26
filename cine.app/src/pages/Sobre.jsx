@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../componentes/Footer/Footer.jsx';
 
 const Sobre = ({ setForm }) => {
     const [nome, setNome] = useState('');
@@ -33,72 +34,75 @@ const Sobre = ({ setForm }) => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-black">
-            <div className="bg-white p-8 rounded shadow-lg max-w-md w-full">
-                <h1 className="text-2xl font-bold mb-6 text-center">Cadastro</h1>
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label htmlFor="nome" className="block text-gray-700 font-bold mb-2">Nome</label>
-                        <input
-                            type="text"
-                            id="nome"
-                            value={nome}
-                            onChange={handleNomeChange}
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                            placeholder="Digite seu nome"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={handleEmailChange}
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                            placeholder="Digite seu email"
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="cpf" className="block text-gray-700 font-bold mb-2">CPF</label>
-                        <input
-                            type="text"
-                            id="cpf"
-                            value={cpf}
-                            onChange={handleCpfChange}
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                            placeholder="Digite seu CPF"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Senha</label>
-                        <input
-                            type="password"
-                            id="password"
-                            value={password}
-                            onChange={handlePasswordChange}
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-                            placeholder="Digite sua senha"
-                            required
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                    >
-                        Cadastrar
-                    </button>
-                    <p className="mt-4 text-sm text-center text-gray-600">
-                        Já tem uma conta?{''} 
-                        <Link to="/login" className="text-blue-500">
-                        Faça login
-                        </Link>
-                    </p>
-                </form>
+        <div className="min-h-screen flex flex-col bg-black">
+            <div className="flex-grow flex items-center justify-center">
+                <div className="bg-white p-8 rounded shadow-lg max-w-md w-full">
+                    <h1 className="text-2xl font-bold mb-6 text-center">Cadastro</h1>
+                    <form onSubmit={handleSubmit}>
+                        <div className="mb-4">
+                            <label htmlFor="nome" className="block text-gray-700 font-bold mb-2">Nome</label>
+                            <input
+                                type="text"
+                                id="nome"
+                                value={nome}
+                                onChange={handleNomeChange}
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                                placeholder="Digite seu nome"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={handleEmailChange}
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                                placeholder="Digite seu email"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label htmlFor="cpf" className="block text-gray-700 font-bold mb-2">CPF</label>
+                            <input
+                                type="text"
+                                id="cpf"
+                                value={cpf}
+                                onChange={handleCpfChange}
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                                placeholder="Digite seu CPF"
+                                required
+                            />
+                        </div>
+                        <div className="mb-6">
+                            <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Senha</label>
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={handlePasswordChange}
+                                className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                                placeholder="Digite sua senha"
+                                required
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >
+                            Cadastrar
+                        </button>
+                        <p className="mt-4 text-sm text-center text-gray-600">
+                            Já tem uma conta?{' '}
+                            <Link to="/login" className="text-blue-500">
+                                Faça login
+                            </Link>
+                        </p>
+                    </form>
+                </div>
             </div>
+            <Footer />
         </div>
     );
 };
