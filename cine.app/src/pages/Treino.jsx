@@ -1,6 +1,6 @@
 function Treino() {
     return (  
-        <h1>Noticias sobre o Cine do Digola</h1>
+        <h1>Seu treino de hoje</h1>
     );
 }
 

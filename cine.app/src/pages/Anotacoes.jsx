@@ -1,6 +1,6 @@
 function Anotacoes() {
     return (  
-        <h1>Noticias sobre o Cine do Digola</h1>
+        <h1>Suas anotações do seu Treino</h1>
     );
 }
 

@@ -1,6 +1,6 @@
 function Dieta() {
     return (  
-        <h1>Noticias sobre o Cine do Digola</h1>
+        <h1>A sua Dieta</h1>
     );
 }
 
