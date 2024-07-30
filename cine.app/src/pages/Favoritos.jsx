@@ -49,40 +49,42 @@ function Favoritos() {
     return (
         <div className="min-h-screen flex flex-col bg-black">
             <Navbar />
-            <div className="container mx-auto p-4 flex-grow flex flex-col items-center">
-                <h1 className="text-white text-4xl mb-6 text-center">Entre em Contato com Profissionais</h1>
-                <div className="mb-8 w-full max-w-md">
+            <div className="container mx-auto p-6 flex-grow flex flex-col items-center">
+                <h1 className="text-3xl font-semibold mb-6 text-center text-white">Entre em Contato com Profissionais</h1>
+                <div className="mb-6 w-full max-w-md">
                     <input
                         type="text"
                         placeholder="Digite seu endereço"
                         value={endereco}
                         onChange={handleEnderecoChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
-                <div className="mb-8 w-full max-w-md">
+                <div className="mb-6 w-full max-w-md">
                     <img 
                         src="https://mobilidadesampa.com.br/wp-content/uploads/2019/10/Avenida-Lins-de-Vasconcelos.png" 
                         alt="Mapa" 
-                        className="object-cover w-full h-48 rounded mb-4" 
+                        className="object-cover w-full h-48 rounded-lg shadow-lg mb-4" 
                     />
                 </div>
-                <div className="mb-8 w-full max-w-md">
+                <div className="mb-6 w-full max-w-md">
                     <input
                         type="text"
                         placeholder="Pesquisar profissionais"
                         value={searchTerm}
                         onChange={handleSearchChange}
-                        className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                        className="w-full px-3 py-2 border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4 w-full">
+                <div className="w-full max-w-4xl">
                     {filteredProfissionais.map((profissional) => (
-                        <div className="bg-white p-4 rounded-lg shadow-lg" key={profissional.nome}>
-                            <img src={profissional.imagem} alt={profissional.nome} className="object-cover w-70 h-48 rounded mb-4" />
-                            <h2 className="text-xl font-bold mb-2">{profissional.nome}</h2>
-                            <h3 className="text-gray-700 mb-2">{profissional.area}</h3>
-                            <p className="text-gray-600">{profissional.descricao}</p>
+                        <div className="bg-gray-800 p-4 rounded-lg shadow-md mb-6 flex items-start" key={profissional.nome}>
+                            <img src={profissional.imagem} alt={profissional.nome} className="object-cover w-32 h-32 rounded-lg mr-4" />
+                            <div className="flex flex-col text-white">
+                                <h2 className="text-lg font-semibold mb-2">{profissional.nome}</h2>
+                                <h3 className="text-gray-400 mb-2">{profissional.area}</h3>
+                                <p className="text-gray-300 text-sm">{profissional.descricao}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
