@@ -53,7 +53,6 @@ function Cardio() {
 
     return (
         <div className="min-h-screen flex flex-col bg-black text-white">
-            <Navbar />
             <div className="container mx-auto p-6 flex-grow flex flex-col items-center">
                 <h1 className="text-4xl font-bold mb-4 text-center">
                     Estatísticas sobre seu Cardio

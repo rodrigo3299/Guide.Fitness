@@ -48,7 +48,6 @@ function Favoritos() {
 
     return (
         <div className="min-h-screen flex flex-col bg-black">
-            <Navbar />
             <div className="container mx-auto p-6 flex-grow flex flex-col items-center">
                 <h1 className="text-3xl font-semibold mb-6 text-center text-white">Entre em Contato com Profissionais</h1>
                 <div className="mb-6 w-full max-w-md">

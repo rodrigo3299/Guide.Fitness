@@ -21,7 +21,7 @@ const treinos = {
         'Puxada na frente',
         'Remada unilateral'
     ],
-    cardiovascular: [
+    cardio: [
         'Corrida',
         'Bicicleta ergométrica',
         'Natação',
@@ -34,14 +34,14 @@ function Treino() {
         musculacao: [],
         perna: [],
         costas: [],
-        cardiovascular: []
+        cardio: []
     });
     
     const [novosTreinos, setNovosTreinos] = useState({
         musculacao: '',
         perna: '',
         costas: '',
-        cardiovascular: ''
+        cardio: ''
     });
 
     const handleChange = (e) => {
