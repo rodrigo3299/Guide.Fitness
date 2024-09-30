@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../componentes/Navbar/Navbar.jsx';
 import Footer from '../componentes/Footer/Footer.jsx';
 
-// Função para formatar a data
+
 const formatDate = (date) => {
     return date.toLocaleDateString('pt-BR', {
         day: '2-digit',
@@ -12,25 +12,25 @@ const formatDate = (date) => {
 };
 
 function Cardio() {
-    // Calcula a data de amanhã
+
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
 
-    // Estado para armazenar as estatísticas do cardio
+
     const [estatisticas, setEstatisticas] = useState([
         { tipo: 'Corrida', tempo: '30 minutos', distancia: '5 km' },
         { tipo: 'Bicicleta', tempo: '45 minutos', distancia: '15 km' },
         { tipo: 'Natação', tempo: '40 minutos', distancia: '1 km' }
     ]);
 
-    // Estado para armazenar os valores dos inputs para uma nova estatística
+  
     const [novoExercicio, setNovoExercicio] = useState({
         tipo: '',
         tempo: '',
         distancia: ''
     });
 
-    // Função para atualizar o estado com os valores dos inputs
+  
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNovoExercicio(prev => ({
@@ -39,7 +39,7 @@ function Cardio() {
         }));
     };
 
-    // Função para adicionar uma nova estatística
+
     const handleAdicionar = () => {
         if (novoExercicio.tipo && novoExercicio.tempo && novoExercicio.distancia) {
             setEstatisticas([...estatisticas, novoExercicio]);
