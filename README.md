@@ -10,7 +10,7 @@ Tecnologias Utilizadas
 - Visual Studio Code
 
 Como Rodar o Projeto
-Clonar o repositório, cd cine app, npm i, npm run dev, node index.js
+Clonar o repositório, cd cine.app, npm i, npm run dev
 
 Grupo :
 Eric Haipeng Ye, Lucca Chen, Marco Antonio, Rafael Quaresma, Victor Lauria, Rodrigo Farias e Christopher Lee
